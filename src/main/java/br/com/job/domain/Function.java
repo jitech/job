@@ -1,15 +1,15 @@
 package br.com.job.domain;
 
-public class Method {
+public class Function {
 
 	private String name;
 	private Object[] parameters;
 	
-	public Method() {
+	public Function() {
 		super();
 	}
 
-	public Method(String name, Object[] parameters) {
+	public Function(String name, Object[] parameters) {
 		super();
 		this.name = name;
 		this.parameters = parameters;

@@ -4,29 +4,19 @@ import java.util.List;
 
 public class Feature {
 
-	private String code;
 	private String name;
-	private List<Method> methods;
+	private List<Function> functions;
 	
 	public Feature() {
 		super();
 	}
 
-	public Feature(String code, String name, List<Method> methods) {
+	public Feature(String name, List<Function> functions) {
 		super();
-		this.code = code;
 		this.name = name;
-		this.methods = methods;
+		this.functions = functions;
 	}
 
-	public String getCode() {
-		return code;
-	}
-	
-	public void setCode(String code) {
-		this.code = code;
-	}
-	
 	public String getName() {
 		return name;
 	}
@@ -34,12 +24,12 @@ public class Feature {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public List<Method> getMethods() {
-		return methods;
+
+	public List<Function> getFunctions() {
+		return functions;
 	}
-	
-	public void setMethods(List<Method> methods) {
-		this.methods = methods;
+
+	public void setFunctions(List<Function> functions) {
+		this.functions = functions;
 	}
 }
