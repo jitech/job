@@ -1,7 +1,10 @@
 package br.com.job.domain;
 
-public class Enterprise {
+import java.io.Serializable;
 
+public class Enterprise extends Domain implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	private String document;
 	private String name;
 	private String status;
@@ -39,5 +42,10 @@ public class Enterprise {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	@Override
+	public String toString() {
+		return "Enterprise [document=" + document + ", name=" + name + ", status=" + status + "]";
 	}
 }

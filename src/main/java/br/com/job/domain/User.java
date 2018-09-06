@@ -1,9 +1,11 @@
 package br.com.job.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class User {
+public class User extends Domain implements Serializable{
 
+	private static final long serialVersionUID = 1L;
 	private String email;
 	private String name;
 	private String password;
@@ -14,13 +16,12 @@ public class User {
 		super();
 	}
 
-	public User(String email, String name, String password, Enterprise enterprise, List<TestUser> tests) {
+	public User(String email, String name, String password, Enterprise enterprise) {
 		super();
 		this.email = email;
 		this.name = name;
 		this.password = password;
 		this.enterprise = enterprise;
-		this.tests = tests;
 	}
 
 	public String getEmail() {
@@ -61,5 +62,11 @@ public class User {
 
 	public void setTests(List<TestUser> tests) {
 		this.tests = tests;
+	}
+
+	@Override
+	public String toString() {
+		return "User [email=" + email + ", name=" + name + ", password=" + password + ", enterprise=" + enterprise
+				+ ", tests=" + tests + "]";
 	}
 }
