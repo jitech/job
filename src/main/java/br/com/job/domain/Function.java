@@ -1,20 +1,12 @@
 package br.com.job.domain;
 
+import java.util.List;
+
 public class Function {
 
 	private String name;
-	private Object[] parameters;
+	private List<TestCase> testCases;
 	
-	public Function() {
-		super();
-	}
-
-	public Function(String name, Object[] parameters) {
-		super();
-		this.name = name;
-		this.parameters = parameters;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -23,11 +15,11 @@ public class Function {
 		this.name = name;
 	}
 	
-	public Object[] getParameters() {
-		return parameters;
+	public List<TestCase> getTestCases() {
+		return testCases;
 	}
 	
-	public void setParameters(Object[] parameters) {
-		this.parameters = parameters;
+	public void setTestCases(List<TestCase> testCases) {
+		this.testCases = testCases;
 	}
 }
