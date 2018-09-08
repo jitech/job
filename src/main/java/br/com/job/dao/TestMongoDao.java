@@ -14,8 +14,8 @@ public class TestMongoDao {
 	public static Test save(Test test) {
 		
 		try {
-				DBCollection collection = MongoUtil.loadDB().getCollection("test");
-				collection.insert(DomainAdaptor.toDBObject(test));
+				//DBCollection collection = MongoUtil.loadDB().getCollection("test");
+				//collection.insert(DomainAdaptor.toDBObject(test));
 				return test;
 			
 		}catch(Exception ex) {
@@ -27,16 +27,18 @@ public class TestMongoDao {
 	public static Test load(String code) {
 		
 		try {
-				DBCollection collection = MongoUtil.loadDB().getCollection("test");			
-				BasicDBObject searchQuery = new BasicDBObject();
-				searchQuery.put("code", code);			
-				DBCursor cursor = collection.find(searchQuery);
+				//DBCollection collection = MongoUtil.loadDB().getCollection("test");			
+				//BasicDBObject searchQuery = new BasicDBObject();
+				//searchQuery.put("code", code);			
+				//DBCursor cursor = collection.find(searchQuery);
 				
-				if(cursor.count() > 1 || cursor.count() == 0) {
-					return null;			
-				}else {
-					return new Gson().fromJson(cursor.next().toString(), Test.class);					
-				}
+				//if(cursor.count() > 1 || cursor.count() == 0) {
+				//	return null;			
+				//}else {
+				//	return new Gson().fromJson(cursor.next().toString(), Test.class);					
+				//}
+			
+			return null;
 			
 		}catch(Exception ex) {
 			ex.printStackTrace();

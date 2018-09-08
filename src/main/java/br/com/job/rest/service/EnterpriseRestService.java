@@ -21,6 +21,6 @@ public class EnterpriseRestService {
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public Enterprise save(@RequestBody Enterprise enterprise) throws UnknownHostException {			
-		return EnterpriseMongoDao.save(enterprise);
+		return null;
     }
 }

@@ -18,25 +18,12 @@ public class UserRestService {
 
 	@RequestMapping(value = "/load", method = RequestMethod.POST)
     public User load(@RequestBody User user) throws UnknownHostException {	
-        return UserMongoDao.load(user.getEmail());
+        return null;//UserMongoDao.load(user.getEmail());
     }
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
     public User save(@RequestBody User user) throws UnknownHostException {	
 		
-		Enterprise enterprise = EnterpriseMongoDao.load(user.getEnterprise().getDocument());
-		
-		if(enterprise != null) {
-			user.setEnterprise(enterprise);
-			return UserMongoDao.save(user);
-		}
-		
 		return null;
-		
-		/*Enterprise enterprise = new Enterprise("9999999", "UOL Diveo", "ACTIVE");	
-		EnterpriseMongoDao.save(enterprise);	
-		user.setName("Jonas Goulart Melo");
-		user.setEnterprise(enterprise);		
-        return UserMongoDao.save(user);*/
     }
 }

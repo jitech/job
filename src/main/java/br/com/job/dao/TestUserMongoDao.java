@@ -11,8 +11,8 @@ public class TestUserMongoDao {
 	public static TestUser save(TestUser testUser) {
 		
 		try {
-				DBCollection collection = MongoUtil.loadDB().getCollection("testUser");
-				collection.insert(DomainAdaptor.toDBObject(testUser));
+				//DBCollection collection = MongoUtil.loadDB().getCollection("testUser");
+				//collection.insert(DomainAdaptor.toDBObject(testUser));
 				return testUser;
 			
 		}catch(Exception ex) {
